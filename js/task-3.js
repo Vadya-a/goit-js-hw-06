@@ -1,5 +1,5 @@
-const input = document.querySelector("#name-input");
+const inputEl = document.querySelector("#name-input");
 
-const output = document.querySelector("#name-output");
- input.addEventListener("input", () => { const name = input.value.trim();
-     output.textContent = name || "Anonymous"; });
+const outputEl = document.querySelector("#name-output");
+ inputEl.addEventListener("input", () => { const name = inputEl.value.trim();
+     outputEl.textContent = name || "Anonymous"; });

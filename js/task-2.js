@@ -46,11 +46,11 @@ console.log(galleryItemsEl);
 
 
 
-const style = document.createElement("style"); 
-style.textContent = ` .gallery 
+const styleEl = document.createElement("style"); 
+styleEl.textContent = ` .gallery 
 { display: flex; flex-wrap: wrap; gap: 24px; padding: 0; list-style: none; }
   .gallery img { display: block; width: 100%; height: 200px;  } `;
    
-   document.head.append(style);
+   document.head.append(styleEl);
 
-console.log(style);
+console.log(styleEl);
