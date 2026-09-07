@@ -30,10 +30,14 @@ console.log(galleryEl);
 
 const galleryItemsEl = images.map(({ url, alt}) => {
   const liEl = document.createElement("li");
+  liEl.classList.add("gallery-item");
   const imgEl = document.createElement("img");
+  imgEl.classList.add("gallery-image");
+
 
   imgEl.src = url;
   imgEl.alt = alt;
+
 
   liEl.append(imgEl);
 
@@ -41,12 +45,14 @@ const galleryItemsEl = images.map(({ url, alt}) => {
 }
 
 );
-galleryEl.append(galleryItemsEl);
+
+galleryEl.append(...galleryItemsEl);
 console.log(galleryItemsEl);
 
 
 
 const styleEl = document.createElement("style"); 
+
 styleEl.textContent = ` .gallery 
 { display: flex; flex-wrap: wrap; gap: 24px; padding: 0; list-style: none; }
   .gallery img { display: block; width: 100%; height: 200px;  } `;
