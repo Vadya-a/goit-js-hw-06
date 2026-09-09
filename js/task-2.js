@@ -45,7 +45,7 @@ console.log(galleryEl);
 // }
 
 // );
-const galleryItems = images .map( ({ url, alt }) => 
+const galleryItemsEl = images .map( ({ url, alt }) => 
   ` <li class="gallery-item"> <img class="gallery-image"
  src="${url}" alt="${alt}" /> </li> ` )
   .join("");
