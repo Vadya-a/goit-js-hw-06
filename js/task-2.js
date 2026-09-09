@@ -28,25 +28,30 @@ const images = [
 const galleryEl = document.querySelector(".gallery");
 console.log(galleryEl);
 
-const galleryItemsEl = images.map(({ url, alt}) => {
-  const liEl = document.createElement("li");
-  liEl.classList.add("gallery-item");
-  const imgEl = document.createElement("img");
-  imgEl.classList.add("gallery-image");
+// const galleryItemsEl = images.map(({ url, alt}) => {
+//   const liEl = document.createElement("li");
+//   liEl.classList.add("gallery-item");
+//   const imgEl = document.createElement("img");
+//   imgEl.classList.add("gallery-image");
 
 
-  imgEl.src = url;
-  imgEl.alt = alt;
+//   imgEl.src = url;
+//   imgEl.alt = alt;
 
 
-  liEl.append(imgEl);
+//   liEl.append(imgEl);
 
-  return liEl;
-}
+//   return liEl;
+// }
 
-);
+// );
+const galleryItems = images .map( ({ url, alt }) => 
+  ` <li class="gallery-item"> <img class="gallery-image"
+ src="${url}" alt="${alt}" /> </li> ` )
+  .join("");
+   galleryEl.insertAdjacentHTML("beforeend", galleryItems);
 
-galleryEl.append(...galleryItemsEl);
+// galleryEl.append(...galleryItemsEl);
 console.log(galleryItemsEl);
 
 
