@@ -49,7 +49,7 @@ const galleryItemsEl = images .map( ({ url, alt }) =>
   ` <li class="gallery-item"> <img class="gallery-image"
  src="${url}" alt="${alt}" /> </li> ` )
   .join("");
-   galleryEl.insertAdjacentHTML("beforeend", galleryItems);
+   galleryEl.insertAdjacentHTML("beforeend", galleryItemsEl);
 
 // galleryEl.append(...galleryItemsEl);
 console.log(galleryItemsEl);
